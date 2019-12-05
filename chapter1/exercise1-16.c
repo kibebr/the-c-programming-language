@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 
-#define MAXLINE 5
+#define MAXLINE 1000
 
 int getLine(char[]);
 void copy(char[], char[]);
