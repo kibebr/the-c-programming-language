@@ -1,5 +1,8 @@
 /*
 	Exercise 1-23: Write a program that remove all commments from a C program.
+
+	TODO: remove the first '/' that remains
+		  support multi-quote comments as well
 */
 
 #include <stdio.h>
@@ -7,8 +10,9 @@
 
 FILE *openTextFile();
 
-int main(void){
+int test(void);
 
+int main(void){
 	FILE* file = openTextFile();
 
 	int currchar, nOfSlashes;
@@ -26,8 +30,9 @@ int main(void){
 				insideComment = true;
 				continue;
 			}
+
 			putchar(currchar);
-		}
+		}	
 		else{
 			if(currchar == '\n'){
 				insideComment = false; // true
@@ -54,6 +59,15 @@ int main(void){
 
 }
 
+int test(void){
+	int curr = 0;
+
+	while( (curr = getchar()) != EOF){
+		putchar((curr = getchar()));
+	}
+
+	return 0;
+}
 
 FILE* openTextFile(void){
 
