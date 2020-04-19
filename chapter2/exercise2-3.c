@@ -1,3 +1,7 @@
+/* 
+    Exercise 2-3: HEXADECIMAL TO DECIMAL CONVERTER
+*/
+
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
